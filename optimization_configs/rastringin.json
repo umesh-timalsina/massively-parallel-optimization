@@ -1,0 +1,6 @@
+{
+  "problem": "RastriginFunction",
+  "problem_kwargs": {
+    "dim": 8
+  }
+}

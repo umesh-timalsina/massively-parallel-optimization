@@ -1,0 +1,8 @@
+pymoo
+dask[all]
+pydantic
+numpy
+opencv-python
+black
+pre-commit
+isort
