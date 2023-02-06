@@ -16,8 +16,3 @@ def local_cluster_client(
     client = Client(cluster)
 
     return client
-
-
-if __name__ == "__main__":
-    cl = local_cluster_client()
-    print(cl)
