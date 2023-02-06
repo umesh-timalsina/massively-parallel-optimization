@@ -2,12 +2,18 @@ import json
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
 
 from mpo.optimization_config import OptimizationConfig
+from pymoo.optimize import minimize
 
 
 def orchestrate_optimization(config: OptimizationConfig):
     ProblemClass = config.get_problem()
     optimization_problem = ProblemClass(**config.problem_kwargs)
-    print(optimization_problem)
+    Algorithm = config.get_algorithm()
+    algorithm = Algorithm(**config.algorithm_kwargs)
+
+    minimize(problem=optimization_problem, algorithm=algorithm, termination=config.termination)
+
+
 
 
 def run(args=None):

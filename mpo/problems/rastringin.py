@@ -7,10 +7,10 @@ from mpo.utils import RegistersMPOConstruct
 
 @RegistersMPOConstruct(construct_name="problems")
 class RastriginFunction(MPOBaseProblem):
-    def __init__(self, dim=9):
+    def __init__(self, dim=9, **kwargs):
         self.dim = dim
         super().__init__(
-            n_var=dim, n_constr=0, n_obj=1, xu=[5.12] * dim, xl=[-5.12] * dim
+            n_var=dim, n_constr=0, n_obj=1, xu=[5.12] * dim, xl=[-5.12] * dim, **kwargs
         )
 
     def _evaluate(self, X, out, *args, **kwargs):
@@ -27,3 +27,6 @@ class RastriginFunction(MPOBaseProblem):
 
     def supported_algorithms(self):
         return [GA]
+
+    def post_evaluation(self):
+        pass
