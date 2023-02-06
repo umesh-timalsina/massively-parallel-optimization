@@ -1,0 +1,11 @@
+{
+  "problem": "RastriginFunction",
+  "problem_kwargs": {
+    "dim": 8
+  },
+  "algorithm": "GA",
+  "save_root": "experiments",
+  "termination": ["n_gen", 30],
+  "verbose": false,
+  "runner": "LocalClusterClient"
+}

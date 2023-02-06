@@ -1,3 +1,5 @@
+from functools import update_wrapper
+
 from .optimization_config import OptimizationConfig
 
 
@@ -11,3 +13,5 @@ class RegistersMPOConstruct:
         construct_registry[
             self.construct_key or getattr(method_or_class, "__name__")
         ] = method_or_class
+        update_wrapper(self, method_or_class)
+        return method_or_class

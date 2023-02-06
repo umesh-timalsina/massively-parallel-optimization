@@ -16,7 +16,7 @@ setup(
         "dask[all]",
         "pydantic",
         "numpy",
-        "opencv-python"
+        "opencv-python",
     ],
     entry_points={"console_scripts": ["mpo = mpo.__main__:run"]},
 )

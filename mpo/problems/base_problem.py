@@ -1,9 +1,9 @@
 import abc
 
-from pymoo.core.problem import ElementwiseProblem
+from pymoo.core.problem import Problem
 
 
-class MPOBaseProblem(ElementwiseProblem):
+class MPOBaseProblem(Problem):
     def __init__(self, **kwargs):  # Only use keyword arguments
         super().__init__(**kwargs)
 

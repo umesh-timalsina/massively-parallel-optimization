@@ -8,5 +8,11 @@ class Result:
 
     def save(self, save_dir: pathlib.Path):
         with open(save_dir / "result.pkl", "wb") as res:
-            pickle.dump(self.algorithm_result, res)
-
+            pickle.dump(
+                {
+                    "X": self.algorithm_result.X,
+                    "F": self.algorithm_result.F,
+                    "G": self.algorithm_result.G,
+                },
+                res,
+            )
