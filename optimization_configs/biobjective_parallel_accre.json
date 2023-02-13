@@ -1,0 +1,12 @@
+{
+    "problem": "BiObjectiveOptimization",
+    "algorithm": "NSGA2",
+    "algorithm_kwargs": {
+      "pop_size": 100
+    },
+    "save_root": "experiments",
+    "termination": ["n_gen", 50],
+    "verbose": true,
+    "runner": "ACCREClient"
+  }
+  
