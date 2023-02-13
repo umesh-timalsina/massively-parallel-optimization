@@ -25,7 +25,7 @@ class RastriginFunction(MPOBaseProblem):
     def _evaluate(self, X, out, *args, **kwargs):
         def func(dim, x):
             A = 10
-            time.sleep(0.01)
+            time.sleep(0.1)
             return A * dim + np.sum(
                 x**2 - A * np.cos(2 * np.pi * x),
                 axis=1 if len(x.shape) == 2 else None,
