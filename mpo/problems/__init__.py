@@ -1,1 +1,2 @@
+from mpo.problems.biobjective_problem import BiObjectiveOptimization
 from mpo.problems.rastringin import RastriginFunction
